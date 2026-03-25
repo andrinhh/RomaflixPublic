@@ -2,6 +2,10 @@
 
 Código-fonte aberto do frontend do Romaflix para transparência e auditoria.
 
+
+LINK PARA TESTE DO SITE: https://romaflix.top
+
+
 Este repositório contém apenas o **frontend** (HTML, CSS, JavaScript puro) — sem backend, sem dados, sem configurações de infraestrutura.
 
 ## O que está incluído
