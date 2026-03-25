@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- SEO_HEAD_START -->
+    <title>ROMAFLIX | Filmes Online - Series Online - Animes Online</title>
+    <meta name="description" content="Romaflix &mdash; Assista filmes, s&eacute;ries e animes online. Biblioteca completa em HD.">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="referrer" content="no-referrer">
+    <meta property="og:title" content="ROMAFLIX | Filmes Online - Series Online - Animes Online">
+    <meta property="og:description" content="Assista filmes, s&eacute;ries e animes online. Biblioteca completa em HD.">
+    <meta property="og:image" content="/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/">
+    <meta property="og:site_name" content="ROMAFLIX">
+    <link rel="canonical" href="/">
+    <!-- SEO_HEAD_END -->
+    <link rel="preconnect" href="https://image.tmdb.org">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/manifest.json">
+    <!-- CSS — todos via style.css (inclui base, catalog, modal, player, pages, responsive) -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header">
+        <div class="logo" data-nav="inicio" title="Romaflix &mdash; In&iacute;cio">
+            <span class="logo-text">ROMAFLIX</span>
+        </div>
+
+        <nav id="nav-desktop" role="navigation" aria-label="Navega&ccedil;&atilde;o principal">
+            <button data-nav="inicio" class="nav-btn">In&iacute;cio</button>
+            <button data-nav="filmes" class="nav-btn">Filmes</button>
+            <button data-nav="series" class="nav-btn">S&eacute;ries</button>
+            <button data-nav="animes" class="nav-btn">Animes</button>
+            <button data-nav="canais" class="nav-btn">Canais</button>
+            <button data-nav="doacao" class="nav-btn">Apoiar</button>
+        </nav>
+
+        <div class="header-right">
+            <div class="search-wrapper" id="search-wrapper">
+                <button class="search-icon-btn" id="search-icon-btn" aria-label="Buscar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <div class="search-box" id="search-box" role="search">
+                    <i class="fa-solid fa-magnifying-glass search-inner-icon"></i>
+                    <input
+                        type="search"
+                        id="input-busca"
+                        placeholder="T&iacute;tulos, g&ecirc;neros, pessoas..."
+                        autocomplete="off"
+                        spellcheck="false"
+                        aria-label="Buscar conte&uacute;do"
+                    >
+                </div>
+                <div class="search-suggestions" id="search-suggestions" role="listbox"></div>
+            </div>
+
+        </div>
+    </header>
+
+    <nav id="bottom-nav" class="bottom-nav" aria-label="Navega&ccedil;&atilde;o mobile">
+        <button class="bottom-nav-item" data-nav="inicio" aria-label="In&iacute;cio">
+            <i class="fa-solid fa-house bottom-nav-icon" aria-hidden="true"></i>
+            <span class="bottom-nav-label">In&iacute;cio</span>
+        </button>
+        <button class="bottom-nav-item" data-nav="filmes" aria-label="Filmes">
+            <i class="fa-solid fa-film bottom-nav-icon" aria-hidden="true"></i>
+            <span class="bottom-nav-label">Filmes</span>
+        </button>
+        <button class="bottom-nav-item" data-nav="series" aria-label="S&eacute;ries">
+            <i class="fa-solid fa-tv bottom-nav-icon" aria-hidden="true"></i>
+            <span class="bottom-nav-label">S&eacute;ries</span>
+        </button>
+        <button class="bottom-nav-item" data-nav="animes" aria-label="Animes">
+            <i class="fa-solid fa-dragon bottom-nav-icon" aria-hidden="true"></i>
+            <span class="bottom-nav-label">Animes</span>
+        </button>
+        <button class="bottom-nav-item" data-nav="canais" aria-label="Canais">
+            <i class="fa-solid fa-satellite-dish bottom-nav-icon" aria-hidden="true"></i>
+            <span class="bottom-nav-label">Canais</span>
+        </button>
+        <button class="bottom-nav-item" data-nav="doacao" aria-label="Apoiar">
+            <i class="fa-solid fa-heart bottom-nav-icon" aria-hidden="true"></i>
+            <span class="bottom-nav-label">Apoiar</span>
+        </button>
+    </nav>
+
+    <div id="toast-container" aria-live="polite"></div>
+
+    <main id="main-content" role="main">
+    <h1 id="page-heading" class="visually-hidden">RomaFlix &mdash; Filmes, S&eacute;ries e Animes Online</h1>
+    </main>
+
+    <div id="modal-container" class="modal" role="dialog" aria-modal="true">
+        <div class="modal-conteudo">
+            <button class="modal-close" id="modal-close-btn" aria-label="Fechar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modal-dados"></div>
+        </div>
+    </div>
+
+
+
+    <script defer src="/js/config.js"></script>
+    <script defer src="/js/store.js"></script>
+    <script defer src="/js/progress.js"></script>
+    <script defer src="/js/utils.js"></script>
+    <script defer src="/js/catalog-shared.js"></script>
+    <script defer src="/js/series-db.js"></script>
+    <script defer src="/js/db.js"></script>
+    <script defer src="/js/api.js"></script>
+    <script defer src="/js/render.js"></script>
+    <script defer src="/js/pages.js"></script>
+    <script defer src="/js/player-canais.js"></script>
+    <script defer src="/js/router.js"></script>
+    <script defer src="/js/nav.js"></script>
+    <script defer src="/js/events.js"></script>
+</body>
+</html>
