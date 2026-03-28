@@ -1,6 +1,3 @@
-# Romaflix — Código-fonte Frontend
-
-Código-fonte aberto do frontend do Romaflix para transparência e auditoria.
 
 
 PARA FINS DE TESTES: https://romaflix.top
